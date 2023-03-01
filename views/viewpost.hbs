@@ -1,0 +1,36 @@
+{{log this}}
+<main>
+    <section>
+        <h2>View Posts!</h2>
+        <div class="userspost">
+            <h3>{{currentPost.title}}</h3>
+            <p>{{currentPost.description}} <br>
+                
+            </p>
+            <img id="viewpost-img" src="/{{currentPost.image}}">
+            <p>
+                posted by: {{currentPost.username}} <br>
+                posted: {{formatDate currentPost.createdAt}}
+            </p>
+        
+            <form  id="comment">
+                <input id="comment-text" class="comment-text" type="text" name="commentText" placeholder="Comment...">
+                <button id="comment-button" class="comment-button" type="submit" data-postid="{{currentPost.id}}"> Comment </button>
+            </form>
+            
+
+            <div id="comments-list" class="comments-list" >
+                <div id="comments" class="comments" >
+                    {{#each currentPost.comments}}
+                    <div id="comment-firstline">
+                        <strong><p id="comment-username" class="comment-username"> {{this.username}} </p></strong>
+                        <p id="comment-timestamp" class="comment-timestamp">  {{formatDate this.createdAt}} </p>
+                    </div> 
+                    <p id="comment-content" class="comment-content">{{this.text}}</p>
+                    {{/each}}
+                </div>
+
+            </div>
+        </div>
+    </section>
+</main>

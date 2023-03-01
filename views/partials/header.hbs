@@ -1,0 +1,24 @@
+<header>
+    <h1>CSC317 Website </h1>
+
+    <nav>
+        {{#if isLoggedIn}}
+        <a href="/">Home</a>
+        <a href="/postimage"> Post Image</a>
+        <a id="logout-button"> Log out</a>
+        {{else}}
+        <a href="/login"> Login</a>
+        <a href="/register"> Registration </a>
+        {{/if}}
+        <form class="search-bar-container" 
+            method="GET"
+            action="/posts/search"
+            enctype="application/x-www-form-urlencoded">
+            <input class="search-bar" type="text" placeholder="Search.." name="searchTerm" value="{{searchValue}}">
+            <button class="search-bar-button" type="submit">Search</button>
+        </form>
+
+
+
+    </nav>
+</header>

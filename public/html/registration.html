@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" type="text/css" href=" ../css/style.css">
+    <script defer type="text/javascript" src="../js/validation.js"></script>
+</head>
+
+<body>
+    <div id="content-wrapper">
+        <header>
+            <h1>CSC317 Website </h1>
+            <nav>
+                <a href="./index.html">Home</a>
+                <a href="./viewpost.html"> View Post</a>
+                <a href="./postimage.html"> Post Image</a>
+                <a href="./login.html"> Login</a>
+                <a href="./registration.html"> Registration </a>
+            </nav>
+        </header>
+
+        <main>
+            <section>
+                <h2>Sign Up</h2>
+
+                <form id="registration-form">
+                    <fieldset>
+                        <label for="username">Username </label>
+                        <input type="text" name="username" id="username" />
+                        <div id="username-error" class="error"></div>
+
+                        <label for="email">Email</label>
+                        <input type="email" name="email" />
+                        
+
+                        <label for="password">Password</label>
+                        <input type="password" id="password" />
+                        <div id="password-error" class="error"></div>
+
+                        <label for="confirm password">Confirm Password</label>
+                        <input type="password" id="confirmed-password"  />
+                        <div id="confirmed-password-error" class="error"></div>
+
+                        <label for="Accept if 13+">User is 13+ years of age</label>
+                        <input type="checkbox" name="yes" required/>
+
+
+
+                        <label for="TOS and Privacy rules?">Do you accept our</label>
+                        <a id="TOS-link" href="#">TOS and Privacy Rules </a>
+                        <input type="checkbox" required />
+
+                        <input type="submit" id="submit-button" value="Sign Up" />
+                    </fieldset>
+                </form>
+                
+            </section>
+        </main>
+    </div>
+    <footer id="footer">Robin Pilapil © 2022</footer>
+
+    </div>
+</body>
+
+</html>
